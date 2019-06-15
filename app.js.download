@@ -1,0 +1,721 @@
+$(document).ready(function () {
+    $('body').bind('', function (e) {
+        e.preventDefault();
+    });
+   $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        var bannerHeight = $('#banner').outerHeight();
+        if (scroll > 0) {
+            $(".navbar").addClass('scrolled');
+        } else {
+            $(".navbar").removeClass('scrolled');
+        }
+    });
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        var docHeight = $(document).height();
+        var footerHeight = $('#footer').outerHeight();
+        console.log(scroll);
+        if(scroll > $('#banner').outerHeight() && scroll < ($('#about').outerHeight()/2+$('#banner').outerHeight())){
+            $('.central-rocket-icon').css({
+                "transform":"translate3d(0,-"+ (scroll*0.4) +"px,0)"
+            });
+        }
+       /* if (scroll > (docHeight - footerHeight - 64)) {
+            $('.navbar').hide();
+        } else {
+            $('.navbar').show();
+        }*/
+    });
+
+    $('#banner-link').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#banner').offset().top - 64
+        }, 600);
+    });
+    $('#get-started').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#about').offset().top - 63
+        }, 600);
+    });
+
+    $('#products-link').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#products').offset().top - 64
+        }, 600);
+    });
+    $('#about-link').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#about').offset().top - 63
+        }, 600);
+    });
+    $('#footer-link').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#footer').offset().top - 64
+        }, 600);
+
+    });
+	$('#live-track2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col1').offset().top - 64
+        }, 600);
+
+    });
+	$('#geofence').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col2').offset().top - 64
+        }, 600);
+
+    });
+	$('#capture-trip').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col3').offset().top - 64
+        }, 600);
+
+    });
+	$('#audit-agent').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col4').offset().top - 64
+        }, 600);
+
+    });
+	$('#manage-trip').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col5').offset().top - 64
+        }, 600);
+
+    });
+	$('#moniter-mil').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col6').offset().top - 64
+        }, 600);
+
+    });
+	$('#route-opt').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col7').offset().top - 64
+        }, 600);
+
+    });
+	$('#easy-to').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col8').offset().top - 64
+        }, 600);
+
+    });
+	$('#admin-dash').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col9').offset().top - 64
+        }, 600);
+
+    });
+	$('#trip-agent').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col10').offset().top - 64
+        }, 600);
+
+    });
+	$('#noti-alrt').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col11').offset().top - 64
+        }, 600);
+
+    });
+	$('#report-anay').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col12').offset().top - 64
+        }, 600);
+
+    });
+	$('#offline-use').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col13').offset().top - 64
+        }, 600);
+
+    });
+	$('#battery').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#col14').offset().top - 64
+        }, 600);
+
+    });
+	$('#car101').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal1').offset().top - 64
+        }, 600);
+
+    });
+	$('#car102').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal2').offset().top - 64
+        }, 600);
+
+    });
+	$('#car103').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal3').offset().top - 64
+        }, 600);
+
+    });
+	$('#car104').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal4').offset().top - 64
+        }, 600);
+
+    });
+	$('#car105').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal5').offset().top - 64
+        }, 600);
+
+    });
+	$('#car106').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal6').offset().top - 64
+        }, 600);
+
+    });
+	$('#car107').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal7').offset().top - 64
+        }, 600);
+
+    });
+	$('#car108').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal8').offset().top - 64
+        }, 600);
+
+    });
+	$('#car109').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal9').offset().top - 64
+        }, 600);
+
+    });
+	$('#car110').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal10').offset().top - 64
+        }, 600);
+
+    });
+	$('#car111').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal11').offset().top - 64
+        }, 600);
+
+    });
+	$('#car112').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal12').offset().top - 64
+        }, 600);
+
+    });
+	$('#car113').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cal13').offset().top - 64
+        }, 600);
+
+    });
+	
+	$('#fleet-dapp').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fleet-dapp1').offset().top - 64
+        }, 600);
+
+    });
+	$('#fleet-capp').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fleet-capp1').offset().top - 64
+        }, 600);
+
+    });
+	$('#fleet-adminpanel').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fleet-adminpanel1').offset().top - 64
+        }, 600);
+
+    });
+	$('#fleet-mobilesite').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fleet-mobilesite1').offset().top - 64
+        }, 600);
+
+    });
+	$('#fleet-website').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fleet-website1').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app1').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app101').offset().top -64
+        }, 600);
+
+    });
+	$('#D-app2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app102').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app3').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app103').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app4').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app104').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app5').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app105').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app6').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app106').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app7').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app107').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app8').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app108').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app9').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app109').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app10').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app110').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app11').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app111').offset().top - 64
+        }, 600);
+
+    });
+	$('#D-app12').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#D-app112').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app1').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app101').offset().top -64
+        }, 600);
+
+    });
+	$('#mos-app2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app102').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app3').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app103').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app4').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app104').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app5').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app105').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app6').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app106').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app7').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app107').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app8').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app108').offset().top - 64
+        }, 600);
+
+    });
+	$('#mos-app9').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#mos-app109').offset().top - 64
+        }, 600);
+
+    });
+	$('#fweb-app1').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fweb-app101').offset().top -64
+        }, 600);
+
+    });
+	$('#fweb-app2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fweb-app102').offset().top - 64
+        }, 600);
+
+    });
+	$('#fweb-app3').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fweb-app103').offset().top - 64
+        }, 600);
+
+    });
+	$('#fweb-app4').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fweb-app104').offset().top - 64
+        }, 600);
+
+    });
+	$('#fweb-app5').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fweb-app105').offset().top - 64
+        }, 600);
+
+    });
+	$('#fweb-app6').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fweb-app106').offset().top - 64
+        }, 600);
+
+    });
+	$('#fweb-app7').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fweb-app107').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app1').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app101').offset().top -64
+        }, 600);
+
+    });
+	$('#fconsum-app2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app102').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app3').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app103').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app4').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app104').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app5').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app105').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app6').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app106').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app7').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app107').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app8').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app108').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app9').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app109').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app10').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app110').offset().top - 64
+        }, 600);
+
+    });
+	$('#fconsum-app11').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fconsum-app111').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app1').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app101').offset().top -64
+        }, 600);
+
+    });
+	$('#fv-app2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app102').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app3').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app103').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app4').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app104').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app5').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app105').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app6').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app106').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app7').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app107').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app8').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app108').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app9').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app109').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app10').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app110').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app11').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app111').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app12').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app112').offset().top - 64
+        }, 600);
+
+    });
+	$('#fv-app13').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#fv-app113').offset().top - 64
+        }, 600);
+
+    });
+	$('#live-track2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool1').offset().top - 64
+        }, 600);
+
+    });
+	$('#geofence2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool2').offset().top - 64
+        }, 600);
+
+    });
+	$('#capture-trip2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool3').offset().top - 64
+        }, 600);
+
+    });
+	$('#audit-agent2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool4').offset().top - 64
+        }, 600);
+
+    });
+	$('#manage-trip2').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool5').offset().top - 64
+        }, 600);
+
+    });
+	$('#monitor-kms').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool6').offset().top - 64
+        }, 600);
+
+    });
+	$('#admin-dashboard').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool7').offset().top - 64
+        }, 600);
+
+    });
+	$('#report-analytics').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool8').offset().top - 64
+        }, 600);
+
+    });
+	$('#manage-hub').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool9').offset().top - 64
+        }, 600);
+
+    });
+	$('#map-agent-hub').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool10').offset().top - 64
+        }, 600);
+
+    });
+	$('#notification').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool11').offset().top - 64
+        }, 600);
+
+    });
+	$('#configure-tracking').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool12').offset().top - 64
+        }, 600);
+
+    });
+	$('#battery-o').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool13').offset().top - 64
+        }, 600);
+
+    });
+	$('#offline-use').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool14').offset().top - 64
+        }, 600);
+
+    });
+    $('#api').click(() => {
+        $("html, body").animate({
+            scrollTop: $('#cool15').offset().top - 64
+        }, 600);
+
+    });
+	
+		
+	
+    $('.footer-1-1-child.maps').click(() => {
+        window.open('https://goo.gl/maps/PojTvvycnQ22', '_blank');
+    });
+    $('.footer-1-1-child.email').click(() => {
+        window.open('mailto:support@rocketflyer.in', '_blank');
+    });
+    $('.footer-1-1-child.phone').click(() => {
+        window.open('tel:9891096677', '_blank');
+    });
+})
+
+/*Side bar menu */
+"use strict";
+var _createClass=function(){function e(e,t){for(var n=0;n<t.length;n++){var s=t[n];s.enumerable=s.enumerable||!1,s.configurable=!0,"value"in s&&(s.writable=!0),Object.defineProperty(e,s.key,s)}}return function(t,n,s){return n&&e(t.prototype,n),s&&e(t,s),t}}();function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}
+var MenuBreaker=function(){function e(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};_classCallCheck(this,e),this.element=t,this.settings=this.settings(n),this.mobileMenu=document.querySelector("[data-mobile]"),this.openButton=document.querySelector("[data-open]"),this.closeButton=document.querySelector("[data-close]"),this.openCloseButton=document.querySelector("[data-open-close]"),this.isOpen=!1,this.changeMenu(),this.menuButton(!0),this.addEventListeners()}return _createClass(e,[{key:"addEventListeners",value:function(){var e=this;window.addEventListener("resize",function(){return e.onWindowResize()})}},{key:"onWindowResize",value:function(){this.changeMenu()}},{key:"subLevels",value:function(){this.items=this.element.querySelectorAll(":not(li) > ul > li > ul");for(var e=0;e<this.items.length;e++){var t=this.items[e].parentNode.clientWidth,n=this.items[e].clientWidth;this.items[e].parentNode.offsetLeft+n>window.innerWidth?this.items[e].style.marginLeft=-n+t+"px":this.items[e].style.marginLeft="0px",this.subItems=this.items[e].querySelectorAll("li > ul");for(var s=0;s<this.subItems.length;s++){var i=this.subItems[s].offsetWidth;this.subItems[s].parentNode.parentNode.parentNode.offsetLeft+i+n>window.innerWidth?this.subItems[s].style.marginLeft=-i+"px":this.subItems[s].style.marginLeft=i+"px"}}}},{key:"open",value:function(){this.mobileMenu.classList.add(this.settings["open-class"]),this.isOpen=!0,"function"==typeof this.settings.onMenuOpen&&this.settings.onMenuOpen()}},{key:"close",value:function(){this.mobileMenu.classList.remove(this.settings["open-class"]),this.isOpen=!1,"function"==typeof this.settings.onMenuClose&&this.settings.onMenuClose()}},{key:"menuButton",value:function(e){var t=this;e&&(null!==this.openButton&&this.openButton.addEventListener("click",function(){return t.open()}),null!==this.closeButton&&this.closeButton.addEventListener("click",function(){return t.close()}),null!==this.openCloseButton&&this.openCloseButton.addEventListener("click",function(){t.isOpen?t.close():t.open()})),this.isOpen&&this.mobileMenu.classList.add(this.settings["open-class"])}},{key:"desktop",value:function(){this.mobileMenu.classList.contains(this.settings["open-class"])>0&&this.mobileMenu.classList.remove(this.settings["open-class"]),this.subLevels()}},{key:"changeMenu",value:function(){this.element.offsetHeight>this.settings["navbar-height"]?(this.menuButton(!1),"function"==typeof this.settings.isMobile&&this.settings.isMobile()):(this.desktop(),"function"==typeof this.settings.isDesktop&&this.settings.isDesktop())}},{key:"settings",value:function(e){var t={"navbar-height":70,"open-class":"open",onMenuOpen:null,onMenuClose:null,isMobile:null,isDesktop:null},n={};for(var s in t)n[s]=s in e?e[s]:t[s];return n}}]),e}(),scope=void 0;if("undefined"!=typeof window?scope=window:"undefined"!=typeof global&&(scope=global),scope&&scope.jQuery){var $=scope.jQuery;$.fn.menuBreaker=function(e){new MenuBreaker(this[0],e)}}"function"==typeof define&&define.amd?define("MenuBreaker",[],function(){return MenuBreaker}):"undefined"==typeof exports||exports.nodeType||("undefined"!=typeof module&&!module.nodeType&&module.exports&&(exports=module.exports=MenuBreaker),exports.default=MenuBreaker);
+
+const elem = document.querySelector('.desktop');
+const menuBreaker = new MenuBreaker(elem, {
+  isMobile: () => {
+    if (document.body.classList.contains('desktop-device') > 0)
+     document.body.classList.remove('desktop-device');
+
+    if (document.querySelector('.mobile').classList.contains('open') > 0)
+     document.querySelector('.overlay').style.visibility = 'visible';
+
+    document.body.classList.add('mobile-device');
+  },
+
+  isDesktop: () => {
+    if (document.body.classList.contains('mobile-device') > 0)
+     document.body.classList.remove('mobile-device');
+
+    if (document.querySelector('.overlay').style.opacity !== 0)
+     document.querySelector('.overlay').style.visibility = 'hidden';
+
+    document.body.classList.add('desktop-device');
+	
+  },
+
+  onMenuOpen: () => {
+	  document.querySelector('.bar1').style.transform = 'rotate(-45deg) translate(-6px, 5px)';
+	  document.querySelector('.bar2').style.opacity = '0';
+	  document.querySelector('.bar3').style.transform = 'rotate(45deg) translate(-4px, -4px)';
+	  
+    Object.assign(document.querySelector('.overlay').style, {
+      'visibility': 'visible',
+      'opacity': 0.6,
+    });
+	  document.querySelector('body').style.position = 'fixed';
+  },
+
+  onMenuClose: () => {
+    
+	document.querySelector('.bar1').style.transform = 'rotate(0deg)';
+	  document.querySelector('.bar2').style.opacity = '1';
+	  document.querySelector('.bar3').style.transform = 'rotate(0deg)';
+	document.querySelector('body').style.position = 'static';
+	  document.querySelector('.bar1').style.background = 'black';
+	  document.querySelector('.bar3').style.background = 'black';
+ 
+
+    setTimeout(() => {
+      document.querySelector('.overlay').style.visibility = 'hidden';
+    }, 300);
+  }
+});
